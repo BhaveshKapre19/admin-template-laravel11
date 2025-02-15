@@ -6,12 +6,12 @@
         <h1 class="text-4xl font-bold text-accent mb-8">All Blog Posts</h1>
 
         <!-- Grid Layout for Main Content and Side Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <!-- Main Content (3 columns) -->
-            <div class="lg:col-span-3 space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content (2 columns) -->
+            <div class="lg:col-span-2 space-y-6">
                 <!-- Stacked Posts -->
-                <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://picsum.photos/400/250" alt="Post image" class="w-full h-40 object-cover" />
+                <article class="bg-white rounded-lg shadow-md overflow-hidden w-[90%] mx-auto">
+                    <img src="https://picsum.photos/400/250" alt="Post image" class="w-full h-36 object-cover" />
                     <div class="p-4">
                         <span class="text-accent text-xs">March 15, 2023</span>
                         <h2 class="text-lg font-bold mt-2 mb-2">Getting Started with Web Development</h2>
@@ -22,8 +22,8 @@
                     </div>
                 </article>
 
-                <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://picsum.photos/400/250" alt="Post image" class="w-full h-40 object-cover" />
+                <article class="bg-white rounded-lg shadow-md overflow-hidden w-[90%] mx-auto">
+                    <img src="https://picsum.photos/400/250" alt="Post image" class="w-full h-36 object-cover" />
                     <div class="p-4">
                         <span class="text-accent text-xs">March 20, 2023</span>
                         <h2 class="text-lg font-bold mt-2 mb-2">Advanced CSS Techniques</h2>
@@ -34,8 +34,8 @@
                     </div>
                 </article>
 
-                <article class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://picsum.photos/400/250" alt="Post image" class="w-full h-40 object-cover" />
+                <article class="bg-white rounded-lg shadow-md overflow-hidden w-[90%] mx-auto">
+                    <img src="https://picsum.photos/400/250" alt="Post image" class="w-full h-36 object-cover" />
                     <div class="p-4">
                         <span class="text-accent text-xs">March 25, 2023</span>
                         <h2 class="text-lg font-bold mt-2 mb-2">JavaScript Frameworks Comparison</h2>
@@ -47,9 +47,9 @@
                 </article>
             </div>
 
-            <!-- Side Section (1 column) -->
+            <!-- Sidebar (Fully Attached to the Right) -->
             <div class="lg:col-span-1">
-                <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="bg-white rounded-lg shadow-md p-6">
                     <!-- Search Box -->
                     <form class="mb-4 flex">
                         <input type="text" placeholder="Search..." class="flex-1 p-2 border border-primary rounded-l-lg focus:outline-none focus:ring-2 focus:ring-accent text-sm" />
