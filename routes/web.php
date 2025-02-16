@@ -10,8 +10,10 @@ Route::get('/posts',function(){
     return view('blog.posts');
 });
 
-Route::get('/check',function(){
+
+
+Route::get('/post/1',function(){
     
-    return redirect()->route('home')->with('warning', 'Post created successfully!');
+    return view('blog.post-detail');
     
 });
