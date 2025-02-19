@@ -51,3 +51,43 @@ Route::get('/admin',function(){
 Route::get('/admin/profile',function(){
     return view('admin.profile');
 });
+
+Route::get('/admin/users',function(){
+    return view('admin.users');
+});
+
+Route::get('/admin/posts',function(){
+    $posts = [
+        [
+            'id' => 1,
+            'title' => 'Introduction to Web Development',
+            'author' => 'John Doe',
+            'category' => 'Technology',
+            'status' => 'Published',
+            'date' => '2024-03-15 14:30',
+            'views' => '2.5k',
+            'thumbnail' => 'https://picsum.photos/100'
+        ],
+        [
+            'id' => 2,
+            'title' => 'UI Design Principles',
+            'author' => 'Jane Smith',
+            'category' => 'Design',
+            'status' => 'Draft',
+            'date' => '2024-03-14 09:15',
+            'views' => '0',
+            'thumbnail' => 'https://picsum.photos/101'
+        ],
+        [
+            'id' => 3,
+            'title' => 'Business Strategy 2024',
+            'author' => 'Robert Brown',
+            'category' => 'Business',
+            'status' => 'Archived',
+            'date' => '2024-03-10 16:45',
+            'views' => '5.1k',
+            'thumbnail' => 'https://picsum.photos/102'
+        ],
+    ];
+    return view('admin.posts',['posts'=>$posts]);
+});

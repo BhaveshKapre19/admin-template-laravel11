@@ -26,6 +26,7 @@
                 <ul class="space-y-2">
                     <x-admin.sidebar-link icon="fa-solid fa-house">Dashboard</x-admin.sidebar-link>
                     <x-admin.sidebar-link icon="fa-solid fa-users">Users</x-admin.sidebar-link>
+                    <x-admin.sidebar-link icon="fa-solid fa-newspaper">Posts</x-admin.sidebar-link>
                     <x-admin.sidebar-dropdown title="Settings" icon="fa-solid fa-cog">
                         <x-admin.sidebar-link icon="fa-solid fa-user">Profile</x-admin.sidebar-link>
                         <x-admin.sidebar-link icon="fa-solid fa-shield-alt">Security</x-admin.sidebar-link>
@@ -57,6 +58,10 @@
             </div>
         </div>
     </div>
+
+
+    @stack('scripts')
+
 </body>
 
 </html>
