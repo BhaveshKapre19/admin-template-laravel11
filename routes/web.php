@@ -91,3 +91,19 @@ Route::get('/admin/posts',function(){
     ];
     return view('admin.posts',['posts'=>$posts]);
 });
+
+Route::get('/admin/check',function(){
+    //return redirect()->back()->with('success', 'Post is created');
+
+    //return redirect()->back()->with('warning', 'Post is not deleted');
+
+    //return redirect()->back()->with('info', 'Post is not edited');
+
+    //return redirect()->back()->with('error', 'The action is unauthorized');
+
+    return redirect()->back()->withErrors(['The action is unauthorized']);
+});
+
+Route::get('admin/post/create',function(){
+    return view('admin.create-post');
+});

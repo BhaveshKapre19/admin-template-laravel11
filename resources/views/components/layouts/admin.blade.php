@@ -9,6 +9,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
+
+    @stack('styles')
 </head>
 
 <body class="bg-gray-900">
@@ -19,7 +21,7 @@
             <div class="flex items-center justify-between mb-6 mt-2">
                 <h1 class="text-xl font-bold text-gray-100">Admin Panel - LWB</h1>
                 <button @click="sidebarOpen = false" class="lg:hidden text-gray-300 focus:outline-none">
-                    ✕
+                    <i class="fa-solid fa-xmark p-2"></i>
                 </button>
             </div>
             <nav>
@@ -42,7 +44,7 @@
             <!-- Top Navbar -->
             <div class="bg-gray-800 p-4 flex justify-between items-center shadow-lg">
                 <button @click="sidebarOpen = true" class="lg:hidden text-gray-300 focus:outline-none">
-                    ☰
+                    <i class="fa-solid fa-bars p-2"></i>
                 </button>
                 <h2 class="text-xl font-semibold text-gray-100">{{ $title ?? 'Dashboard' }}</h2>
                 <input type="text" placeholder="Search..."
@@ -53,6 +55,28 @@
             <!-- Page Content -->
             <div class="p-6">
                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    @if(session('success'))
+                        <x-admin.alert type="success" :message="session('success')" />
+                    @endif
+
+                    @if(session('error'))
+                        <x-admin.alert type="error" :message="session('error')" />
+                    @endif
+
+                    @if(session('warning'))
+                        <x-admin.alert type="warning" :message="session('warning')" />
+                    @endif
+
+                    @if(session('info'))
+                        <x-admin.alert type="info" :message="session('info')" />
+                    @endif
+
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <x-admin.alert type="error" :message="$error" />
+                        @endforeach
+                    @endif
+
                     {{ $slot }}
                 </div>
             </div>
